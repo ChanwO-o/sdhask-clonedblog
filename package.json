@@ -1,0 +1,13 @@
+{
+  "name": "chanwoopark-blog",
+  "version": "0.0.0",
+  "description": "cwp blog",
+  "main": "server.js",
+  "repository": "",
+  "author": "Chan Woo Park <14cpark@gmail.com>",
+  "dependencies": {
+    "express": "^3.2.6",
+    "mongoose": "^4.11.10",
+    "body-parser": "^1.17.2"
+  }
+}

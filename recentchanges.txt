@@ -1,0 +1,19 @@
+commit msg
+
+---------------------
+
+- initial commit resume portion & blog portion
+- organize tabs and sections
+
+
+
+
+TODO
+
+---------------------
+
+- main page change to carousel with glass button slider
+- set main image to pullup bar workout
+- prepare list of random strings to generate on main
+- fill in remaining Lorem ipsum
+- move to github repo

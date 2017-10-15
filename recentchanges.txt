@@ -2,18 +2,19 @@ commit msg
 
 ---------------------
 
-- initial commit resume portion & blog portion
-- organize tabs and sections
-
-
+- setup mongoose api for post & get requests @ https://chanwoopark-blog-chanw0o.c9users.io/api/blogposts
 
 
 TODO
 
 ---------------------
 
+DB
+- store sample html json blogposts in mongod
+- read from mongod and render accordingly on single.html
+
+UI
 - main page change to carousel with glass button slider
-- set main image to pullup bar workout
+- set main image to pullup bar image
 - prepare list of random strings to generate on main
 - fill in remaining Lorem ipsum
-- move to github repo

@@ -9,33 +9,66 @@ var mongoose = require('mongoose');
  * Database configuration
  */
 
-mongoose.connect('mongodb://localhost/blog');
+mongoose.connect('mongodb://localhost/blog2017');
 
 var PostSchema = mongoose.Schema({
     title: {type: String, required: true},
+    posted: {type: Date, default: Date.now()},                                      // default:current date
     body: String,                                                                   //html content to string
     tag: {type: String, enum: ['Dev', 'Gaming', 'Army', 'Review', 'Social']},       // the only valid tags allowed
-    posted: {type: Date, default: Date.now()}                                       // default:current date
 }, {collection: 'blogposts'}); // collection name is 'blogposts'
 
 var PostModel = mongoose.model("PostModel", PostSchema);
 
 
 
-app.use(express.static(path.resolve(__dirname, 'public')));
-app.use(bodyParser.json());     // turn on json parsing
+app.use(express.static(path.resolve(__dirname, 'public'))); // static content lives here
+app.use(bodyParser.json()); // turn on json parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
 /**
  * Mappings
  */
-
-// app.post("/api/blogpost", createBlogPost);
-// app.get("/api/blogpost", getAllPosts);
+app.post("/api/blogposts", createBlogPost);
+app.get("/api/blogposts", getAllPosts);
 // app.delete("/api/blogpost/:id", deletePost);
 // app.get("/api/blogpost/:id", getPostById);
 // app.put("/api/blogpost/:id", updatePost);
+
+
+// retrieve data from post request
+function createBlogPost(req, res) {
+    var theblogpost = req.body;
+    console.log("request received:", theblogpost);
+    PostModel
+        .create(theblogpost) // an asynchronous call to insert post object to database ** creates 'race condition'; we must handle both success & fail cases
+        .then(
+            function (postObj) {   // successful callback from database
+                res.json(200); // respond to request by returning status ok
+                console.log("ok");
+            },
+            function (error) {   // fail
+                res.sendStatus(400);    // http unsuccessful request
+                console.log("not ok");
+            }
+        )
+}
+
+// retrieve all posts from database as an array, send back to client
+function getAllPosts(req, res) {
+    PostModel
+        .find() // retrieve instances from a collection (no parameters: returns everything)
+        .then(
+            function(blogposts) { // successful: pass all data
+                res.json(blogposts);
+            },
+            function(error) {
+                res.sendStatus(400);
+            }
+        );
+}
+
 
 
 

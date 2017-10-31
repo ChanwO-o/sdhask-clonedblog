@@ -2,19 +2,24 @@ commit msg
 
 ---------------------
 
-- setup mongoose api for post & get requests @ https://chanwoopark-blog-chanw0o.c9users.io/api/blogposts
+- moved database interaction to BlogMainController
+- remove sample blogpost clutter from index
 
 
 TODO
 
 ---------------------
 
+CODE
+* index.html body should consist single ng-view & use $locationprovider
+* move all body content to separate files, including controllers
+* https://stackoverflow.com/questions/33720267/how-to-navigate-one-page-to-another-page-using-angularjs
+
 DB
 - store sample html json blogposts in mongod
-- read from mongod and render accordingly on single.html
+- pass json object to single.html and render accordingly
 
 UI
+- read most recent blogs from database, load next blog on button click
 - main page change to carousel with glass button slider
-- set main image to pullup bar image
-- prepare list of random strings to generate on main
 - fill in remaining Lorem ipsum

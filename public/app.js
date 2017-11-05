@@ -1,5 +1,9 @@
 (function () {
-    var app = angular.module("WebsiteApp", [] );
+    var app = angular.module("WebsiteApp", ['ngRoute'] );
+    
+    app.config(['$routeProvider', function($routeProvider) {
+        // $routeProvider.when('/', {templateUrl: 'portfolio/index.html'});
+    }]);
     
     /**
      * Portfolio-related controllers

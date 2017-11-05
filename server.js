@@ -21,8 +21,12 @@ var PostSchema = mongoose.Schema({
 var PostModel = mongoose.model("PostModel", PostSchema);
 
 
-
-app.use(express.static(path.resolve(__dirname, 'public'))); // static content lives here
+/**
+ * Express configuration:
+ * both directories are declared separately as main sources for serving static content
+ */
+app.use(express.static(path.join(__dirname, 'public', 'portfolio'))); // adding '/portfolio' as first param will change url
+app.use('/blog', express.static(path.join(__dirname, 'public', 'blog')));
 app.use(bodyParser.json()); // turn on json parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -70,8 +74,11 @@ function getAllPosts(req, res) {
 }
 
 
-
-
+// route parkchanwoo.com to portfolio index // not needed, static dir setup already does this
+// app.get('/', function(req, res) { // anytime anyone goes into base ('/') directory, run this function
+//     // res.render('portfolio/index.html');
+//     res.sendfile(path.join(__dirname, 'public', 'portfolio', 'index.html'));
+// });
 
 
 var port = process.env.PORT;
@@ -96,3 +103,11 @@ app.listen(port, function() {
 // use myblog2017
 // show collections
 // db.blogposts.find()
+
+// git
+
+// check changes with 'git status -v -v'
+// git add . (call command on parent directory)
+// git commit -m "asdf"
+// git remote -v
+// git push origin develop

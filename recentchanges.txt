@@ -2,9 +2,8 @@ commit msg
 
 ---------------------
 
-- separate blog code from portfolio code under public directory
-- declare both blog & portfolio dirs as static sources
-- remove portfolio index of angularjs declarations
+- add /public folder as static source for importing app.js script from index.html
+- move script tags into header tags
 
 
 TODO
@@ -15,7 +14,6 @@ CODE
 * configure Angular routing with angular-route
 * index.html body should consist single ng-view & use $locationprovider
 * move all body content to separate files, including controllers
-* https://stackoverflow.com/questions/33720267/how-to-navigate-one-page-to-another-page-using-angularjs
 
 DB
 - store sample html json blogposts in mongod

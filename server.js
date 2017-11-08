@@ -27,6 +27,8 @@ var PostModel = mongoose.model("PostModel", PostSchema);
  */
 app.use(express.static(path.join(__dirname, 'public', 'portfolio'))); // adding '/portfolio' as first param will change url
 app.use('/blog', express.static(path.join(__dirname, 'public', 'blog')));
+app.use(express.static(path.join(__dirname, 'public'))); // required for accessing app.js from both portfolio & blog
+
 app.use(bodyParser.json()); // turn on json parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 

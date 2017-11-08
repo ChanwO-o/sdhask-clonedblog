@@ -6,18 +6,6 @@
     }]);
     
     /**
-     * Portfolio-related controllers
-     */
-    app.controller("PortfolioController", function($scope, $http) {
-        
-        function init() {
-            console.log("PortfolioController app.js init()");
-        }
-        
-        init();
-    });
-    
-    /**
      * Blog-related controllers
      */
     app.controller("BlogMainController", function($scope, $http) {
@@ -30,7 +18,7 @@
         function init() {
             console.log("BlogMainController app.js init()");
             createJson();
-            loadPosts();
+            // loadPosts(); // loads up to 3 blogposts initially
         }
         
         function createJson() {
@@ -53,20 +41,8 @@
                 );
         }
         
-        /**
-         * Load up to 3 recent blogposts on blog main
-         */
-        function loadPosts() {
-            
-        }
-        
         init();
     });
-    
-    // app.controller("BlogAboutController", BlogAboutController);
-    
-    // app.controller("BlogVisitorsController", BlogVisitorsController);
-    
-    
-    
+
+
 }) ();

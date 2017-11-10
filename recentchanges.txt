@@ -2,8 +2,8 @@ commit msg
 
 ---------------------
 
-- add /public folder as static source for importing app.js script from index.html
-- move script tags into header tags
+- configure angular routing with test partial and controller
+- separate controllers and partials to different directories
 
 
 TODO
@@ -11,9 +11,8 @@ TODO
 ---------------------
 
 CODE
-* configure Angular routing with angular-route
-* index.html body should consist single ng-view & use $locationprovider
-* move all body content to separate files, including controllers
+- right sidebar content should consist of single ng-view
+- use locationprovider for clean url
 
 DB
 - store sample html json blogposts in mongod

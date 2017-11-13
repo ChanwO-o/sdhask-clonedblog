@@ -1,4 +1,4 @@
-app.controller("blogMainController", function($scope, $http) {
+angular.module("WebsiteApp").controller("blogMainController", function($scope, $http) {
         
         $scope.readMore = function() {
             alert("readMore() clicked");

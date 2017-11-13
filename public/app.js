@@ -3,14 +3,9 @@
     
     app.config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {
-            templateUrl: 'partials/testpartial.html',
-            controller: 'testPartialController'
+            templateUrl: 'partials/blogMain.html',
+            controller: 'blogMainController'
         });
     }]);
-    
-    /**
-     * Blog-related controllers
-     */
-    
 
 }) ();

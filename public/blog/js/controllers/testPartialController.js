@@ -2,4 +2,4 @@ angular.module("WebsiteApp").controller("testPartialController", function($scope
     
     console.log('Blub blub from testpartialcontroller');
     
-});
+    });

@@ -2,8 +2,9 @@ commit msg
 
 ---------------------
 
-- configure angular routing with test partial and controller
-- separate controllers and partials to different directories
+- set right sidebar content as single ng-view (excluding footer)
+- bring back blogMainController with blogMain partial copied over from original index
+- edited css file for displaying blog post on blogMain
 
 
 TODO
@@ -11,10 +12,13 @@ TODO
 ---------------------
 
 CODE
-- right sidebar content should consist of single ng-view
-- use locationprovider for clean url
+* use locationprovider for clean url
+* test url inputs for every scenario
+- create single blog partial href, use angular routing to access
+- create blogpost concise method to display short posts on blogMain list
 
 DB
+- find usable mongodb client to easily read/write with
 - store sample html json blogposts in mongod
 - pass json object to single.html and render accordingly
 

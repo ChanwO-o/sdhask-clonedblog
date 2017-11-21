@@ -2,23 +2,17 @@ commit msg
 
 ---------------------
 
-- configure locationprovider for cleaning hash-banged urls
-- modify single.html partial and add controller
-- swap angular & jquery lib script tag positions for loading jquery first
-
+- fix major choke with express static source for blog directory which prevented partials from showing (removed first param '/blog')
+- route single blog url to /blog/single
+- setup more links here n there
 
 TODO
 
 ---------------------
 
-CODE
-* use locationprovider for clean url
-- create single blog partial href, use angular routing to access
-- create blogpost concise method to display short posts on blogMain list
-
 DB
 - find usable mongodb client to easily read/write with
-- store sample html json blogposts in mongod
+- create blogpost concise method to display short posts on blogMain list
 - pass json object to single.html and render accordingly
 
 UI

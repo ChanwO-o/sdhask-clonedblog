@@ -76,13 +76,6 @@ function getAllPosts(req, res) {
 }
 
 
-// route parkchanwoo.com to portfolio index // not needed, static dir setup already does this
-// app.get('/', function(req, res) { // anytime anyone goes into base ('/') directory, run this function
-//     // res.render('portfolio/index.html');
-//     res.sendfile(path.join(__dirname, 'public', 'portfolio', 'index.html'));
-// });
-
-
 var port = process.env.PORT;
 app.listen(port, function() {
     console.log('SERVER RUNNING... PORT: ' + port);

@@ -2,9 +2,9 @@ commit msg
 
 ---------------------
 
-- set right sidebar content as single ng-view (excluding footer)
-- bring back blogMainController with blogMain partial copied over from original index
-- edited css file for displaying blog post on blogMain
+- configure locationprovider for cleaning hash-banged urls
+- modify single.html partial and add controller
+- swap angular & jquery lib script tag positions for loading jquery first
 
 
 TODO
@@ -13,7 +13,6 @@ TODO
 
 CODE
 * use locationprovider for clean url
-* test url inputs for every scenario
 - create single blog partial href, use angular routing to access
 - create blogpost concise method to display short posts on blogMain list
 

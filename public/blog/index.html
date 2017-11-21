@@ -32,14 +32,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
     
     
+    <!-- All Javascript Plugins  -->
+    <script type="text/javascript" src="js/jquery.min.js"></script> <!-- add jQuery before angular -->
+    <script type="text/javascript" src="js/plugin.js"></script>
     
     <!-- Load angularjs google library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     
-    <!-- All Javascript Plugins  -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/plugin.js"></script>
     
     <!-- Main Javascript File  -->
     <script type="text/javascript" src="js/scripts.js"></script>
@@ -48,6 +48,8 @@
 
     <!-- Controllers -->
     <script type="text/javascript" src="js/controllers/blogMainController.js"></script>
+    <script type="text/javascript" src="js/controllers/singleController.js"></script>
+    <script type="text/javascript" src="js/controllers/testPartialController.js"></script>
     
     <!-- Bootstrap -->
     <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
@@ -128,6 +130,7 @@
                  
                  <!-- Blog Post (Right Sidebar) Start -->
                  <div class="col-md-9">
+                     
                     <div class="ng-view col-md-12 page-body"> <!-- this div tag doesn't include the footer -->
                     
                     </div>

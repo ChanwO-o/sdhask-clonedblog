@@ -28,6 +28,7 @@ var PostModel = mongoose.model("PostModel", PostSchema);
 app.use(express.static(path.join(__dirname, 'public', 'portfolio'))); // adding '/portfolio' as first param will change url
 app.use(express.static(path.join(__dirname, 'public', 'blog')));    // leaving first param as '/blog' will not load main partial
 app.use(express.static(path.join(__dirname, 'public'))); // required for accessing app.js from both portfolio & blog
+// app.use(express.static(path.join(__dirname, 'public', 'blog', 'js')));
 
 app.use(bodyParser.json()); // turn on json parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -98,6 +99,8 @@ app.listen(port, function() {
 // use myblog2017
 // show collections
 // db.blogposts.find()
+// db.blogposts.remove({"title": "t1"})
+// db.blogposts.insert({title: 'Mongo test title1', posted: ISODate("2017-11-21T23:38:32.406Z"), author: 'Chan Woo Park', body: '<h1>London</h1><h3>London is the capital city of England.</h3>'})
 
 // git
 

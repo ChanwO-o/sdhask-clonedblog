@@ -2,16 +2,14 @@ commit msg
 
 ---------------------
 
-- fix major choke with express static source for blog directory which prevented partials from showing (removed first param '/blog')
-- route single blog url to /blog/single
-- setup more links here n there
+- import effect-scripts file from individual partials
+- load all blogposts on startup & bring back ng-repeat to display on main
 
 TODO
 
 ---------------------
 
 DB
-- find usable mongodb client to easily read/write with
 - create blogpost concise method to display short posts on blogMain list
 - pass json object to single.html and render accordingly
 

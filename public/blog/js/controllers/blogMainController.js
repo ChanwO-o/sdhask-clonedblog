@@ -1,4 +1,4 @@
-angular.module("WebsiteApp").controller("blogMainController", function($scope, $http) {
+app.controller("blogMainController", function($scope, $http, sharedata) {
         
         var getAllPostsRequest = $http.get("/api/blogposts")
             .then(function (allBlogPosts) {
@@ -22,7 +22,8 @@ angular.module("WebsiteApp").controller("blogMainController", function($scope, $
         
         
         $scope.readPost = function(id) {
-            console.log("selected blog id is: " + id);
+            console.log("setting viewBlogId as: " + id);
+            sharedata.setViewBlogId(id);
         }
         
         init();

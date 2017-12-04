@@ -1,9 +1,9 @@
-angular.module("WebsiteApp").controller("singleController", function($scope, $http) {
-        
-        
-        function init() {
-        }
-        
-        
-        init();
-    });
+app.controller("singleController", function($scope, $http, sharedata) {
+    
+    function init() {
+        console.log("from single init(): " + sharedata.getViewBlogId());
+    }
+    
+    
+    init();
+});

@@ -2,7 +2,9 @@ commit msg
 
 ---------------------
 
-- fix scripts and styles for displaying blogposts in main
+- remove app.js anonymous function wrap & rewrite controllers
+- define sharedata service
+- read/write blog id to sharedata service from controllers
 
 TODO
 

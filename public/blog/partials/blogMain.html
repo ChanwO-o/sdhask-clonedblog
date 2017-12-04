@@ -37,7 +37,8 @@
                     <span>{{blogpost.posted}} / by <a href="#" target="_blank">{{blogpost.author}}</a></span>
                 </div>
                 <p>{{blogpost.body}}</p>
-                <a href="/blog/single" class="button button-style button-anim fa fa-long-arrow-right"><span>Read More</span></a>
+                <p>{{blogpost._id}}</p>
+                <a href="/blog/single" ng-click="readPost(blogpost._id)" class="button button-style button-anim fa fa-long-arrow-right"><span>Read More</span></a>
                 
             </div>
             <!--Blog Post End -->

@@ -2,8 +2,7 @@ commit msg
 
 ---------------------
 
-- import effect-scripts file from individual partials
-- load all blogposts on startup & bring back ng-repeat to display on main
+- fix scripts and styles for displaying blogposts in main
 
 TODO
 
@@ -11,9 +10,9 @@ TODO
 
 DB
 - create blogpost concise method to display short posts on blogMain list
-- pass json object to single.html and render accordingly
+- pass json data to single.html and render accordingly
 
 UI
-- read most recent blogs from database, load next blog on button click
+- read most recent blogs from database
 - main page change to carousel with glass button slider
 - fill in remaining Lorem ipsum

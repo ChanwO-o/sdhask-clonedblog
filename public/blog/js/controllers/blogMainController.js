@@ -8,8 +8,8 @@ angular.module("WebsiteApp").controller("blogMainController", function($scope, $
         
         getAllPostsRequest.then(function (allBlogPosts) {
             console.log(allBlogPosts);
-            
-        })
+            // console.log("bp length is: " + angular.element("#div.blog-post").length);
+        });
         
         
         
@@ -18,15 +18,12 @@ angular.module("WebsiteApp").controller("blogMainController", function($scope, $
         
         
         function init() {
-            console.log("blogMainController app.js init()");
-            loadPosts(); // loads up to 3 blogposts initially
         }
         
         
-        function loadPosts() {
-            // get value from getAllPosts()
-            // represent each data object as condensed blogpost
+        $scope.readPost = function(id) {
+            console.log("selected blog id is: " + id);
         }
         
-        // init();
+        init();
     });

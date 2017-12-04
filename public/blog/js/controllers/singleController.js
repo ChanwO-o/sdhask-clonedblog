@@ -2,7 +2,6 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
         
         
         function init() {
-            console.log("singleController init()");
         }
         
         

@@ -162,12 +162,11 @@
 	   
 	   
 	   
-       /* Load More Post */	
+    //   /* Load More Post */	
 	   	
-        $("div.blog-post").slice(0, 4).show(); // shows 4 blogs at start
+        // $("div.blog-post").slice(0, 1).show();
+        // console.log("before load: " + $("div.blog-post").length); // always 1 cuz it counts before ng-repeat loads
           $("#load-more-post").on('click', function (e) {
-             console.log("load more clicked");
-            //  $http.gert(asdfasd) // try to make http request here, load 3-4 more blogs per click
               
              e.preventDefault();
              $("div.blog-post:hidden").slice(0, 1).slideDown(300);

@@ -19,8 +19,8 @@
         
         // this.testfunc = function() { console.log("from sharedata service"); }
         
-        var viewBlogId = 'DEFAULT_ID';
+        var viewBlog = {};
         
-        this.getViewBlogId = function() { return viewBlogId; }
-        this.setViewBlogId = function(id) { viewBlogId = id; }
+        this.getViewBlog = function() { return viewBlog; }
+        this.setViewBlog = function(bp) { viewBlog = bp; }
     });

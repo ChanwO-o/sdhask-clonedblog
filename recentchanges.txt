@@ -2,19 +2,19 @@ commit msg
 
 ---------------------
 
-- remove app.js anonymous function wrap & rewrite controllers
-- define sharedata service
-- read/write blog id to sharedata service from controllers
+- change sharedata service datatype from id to blogpost
+- added optional 'select blog using index from ng-repeat' (commented out)
 
 TODO
 
 ---------------------
 
 DB
-- create blogpost concise method to display short posts on blogMain list
-- pass json data to single.html and render accordingly
+- 
 
 UI
-- read most recent blogs from database
+- create blogpost concise method to display short posts on blogMain list
+- render blogpost json body content
+- edit script.js to display recent blogs in blogmain
 - main page change to carousel with glass button slider
 - fill in remaining Lorem ipsum

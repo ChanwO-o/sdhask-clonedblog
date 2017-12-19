@@ -7,7 +7,7 @@ app.controller("blogMainController", function($scope, $http, sharedata) {
             });
         
         getAllPostsRequest.then(function (allBlogPosts) {
-            console.log(allBlogPosts);
+            // console.log(allBlogPosts);
             // console.log("bp length is: " + angular.element("#div.blog-post").length);
         });
         
@@ -21,10 +21,14 @@ app.controller("blogMainController", function($scope, $http, sharedata) {
         }
         
         
-        $scope.readPost = function(id) {
-            console.log("setting viewBlogId as: " + id);
-            sharedata.setViewBlogId(id);
+        $scope.readPost = function(blogpost) {
+            console.log("setting viewBlog as: " + blogpost);
+            sharedata.setViewBlog(blogpost);
         }
+        
+        // $scope.testIndex = function(index) {
+        //     console.log("index is " + index);
+        // }
         
         init();
     });

@@ -1,7 +1,15 @@
 app.controller("singleController", function($scope, $http, sharedata) {
     
     function init() {
-        console.log("from single init(): " + sharedata.getViewBlogId());
+        var post = sharedata.getViewBlog();
+        console.log("from single init():");
+        console.log(post);
+        
+        // console.log($http({
+        //   url: "/api/blogposts",
+        //   method: "GET",
+        //   params: {_id: postId}
+        // }));
     }
     
     

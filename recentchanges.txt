@@ -2,8 +2,8 @@ commit msg
 
 ---------------------
 
-- change sharedata service datatype from id to blogpost
-- added optional 'select blog using index from ng-repeat' (commented out)
+- add repeatEnd directive to app, hides blogposts on blogMain after ng-repeat is finished rendering
+- removed display:none style from blog-post class stylesheet (again)
 
 TODO
 

@@ -595,7 +595,7 @@ tr > td:nth-child(2) {
 /* Blog Post & Single Blog Page */
 
 div.blog-post {
-    display: none; /* hides all blogs before Load button is clicked */
+    /* display: none; # instead of keeping posts invisible by default, let's hide them manually */
     margin-bottom: 50px;
 }
 

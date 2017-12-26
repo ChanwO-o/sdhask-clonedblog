@@ -162,10 +162,8 @@
 	   
 	   
 	   
-    //   /* Load More Post */	
-	   	
-        // $("div.blog-post").slice(0, 1).show();
-        // console.log("before load: " + $("div.blog-post").length); // always 1 cuz it counts before ng-repeat loads
+      /* Load More Post */	
+      
           $("#load-more-post").on('click', function (e) {
               
              e.preventDefault();

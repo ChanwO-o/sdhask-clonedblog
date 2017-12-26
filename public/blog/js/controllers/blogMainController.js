@@ -6,17 +6,6 @@ app.controller("blogMainController", function($scope, $http, sharedata) {
                 return allBlogPosts.data;
             });
         
-        getAllPostsRequest.then(function (allBlogPosts) {
-            // console.log(allBlogPosts);
-            // console.log("bp length is: " + angular.element("#div.blog-post").length);
-        });
-        
-        
-        
-        
-        
-        
-        
         function init() {
         }
         

@@ -2,7 +2,8 @@ commit msg
 
 ---------------------
 
-- just formatting stuff, nothing else..
+- cleanup single.html & display post contents
+- copy original single.html to singlesample.html for reference purposes
 
 TODO
 
@@ -14,6 +15,5 @@ DB
 UI
 - create blogpost concise method to display short posts on blogMain list
 - render blogpost json body content
-- edit script.js to display recent blogs in blogmain
 - main page change to carousel with glass button slider
 - fill in remaining Lorem ipsum

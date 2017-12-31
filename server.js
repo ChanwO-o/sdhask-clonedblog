@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost/blog2017');
 var PostSchema = mongoose.Schema({
     title: {type: String, required: true},
     posted: {type: Date, default: Date.now()},                                      // default:current date
-    body: String,                                                                   //html content to string
+    body: String,                                                                   // html content to string
     tag: {type: String, enum: ['Dev', 'Gaming', 'Army', 'Review', 'Social']},       // the only valid tags allowed
 }, {collection: 'blogposts'}); // collection name is 'blogposts'
 

@@ -2,8 +2,7 @@ commit msg
 
 ---------------------
 
-- cleanup single.html & display post contents
-- copy original single.html to singlesample.html for reference purposes
+- render blogpost content on single.html using ng-bind-html + ngSanitize
 
 TODO
 

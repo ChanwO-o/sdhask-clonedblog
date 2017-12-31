@@ -2,8 +2,7 @@ commit msg
 
 ---------------------
 
-- add repeatEnd directive to app, hides blogposts on blogMain after ng-repeat is finished rendering
-- removed display:none style from blog-post class stylesheet (again)
+- just formatting stuff, nothing else..
 
 TODO
 

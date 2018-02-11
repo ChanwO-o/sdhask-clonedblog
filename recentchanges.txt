@@ -2,7 +2,7 @@ commit msg
 
 ---------------------
 
-- render blogpost content on single.html using ng-bind-html + ngSanitize
+- setup simple summary function for displaying posts on main (grabs first <p> element) will improve this
 
 TODO
 
@@ -12,7 +12,5 @@ DB
 - 
 
 UI
-- create blogpost concise method to display short posts on blogMain list
-- render blogpost json body content
 - main page change to carousel with glass button slider
 - fill in remaining Lorem ipsum

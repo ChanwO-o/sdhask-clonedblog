@@ -23,8 +23,11 @@
                 <div class="post-info">
                     <span>{{blogpost.posted}} / by <a href="#" target="_blank">{{blogpost.author}}</a></span>
                 </div>
-                <p>{{blogpost.body}}</p>
-                <p>{{blogpost._id}}</p>
+                
+                
+                <div ng-bind-html="summarizePost(blogpost)"></div>
+                
+                
                 <a href="/blog/single" ng-click="readPost(blogpost)" class="button button-style button-anim fa fa-long-arrow-right"><span>Read More</span></a>
                 
             </div>

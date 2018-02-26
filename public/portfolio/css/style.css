@@ -1,8 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:500,600,700,100,800,900,400,200,300);
-@import url(http://fonts.googleapis.com/css?family=Playball);
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,600,700,100,800,900,400,200,300);
+@import url(https://fonts.googleapis.com/css?family=Playball);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
 body, html{
-	font-family: 'Raleway', sans-serif;
+	/*font-family: 'Raleway', sans-serif;*/
+	font-family: 'Roboto Slab', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 }
@@ -14,12 +16,15 @@ body, html{
 }
 
 h1{
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 h2{
 	line-height: 20px;
-	margin:  0;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	font-size: 40px;
+	font-weight: 700;
 }
 
 h4 {
@@ -56,11 +61,12 @@ a:focus{
 
 /* Home Style */
 #tf-home{
-	background: url(../img/01.jpg);
+	background: url(../img/shoes.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	height: 800px;
 	color: #cfcfcf;
 }
 
@@ -72,7 +78,7 @@ a:focus{
 	background: -ms-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
-	height: auto;
+	height: inherit;
 	background-attachment: fixed;
 }
 
@@ -141,8 +147,8 @@ a:focus{
 	color: rgb(47, 147, 123);
 }
 
-#tf-portfolio{
-	background: #f1f1f1;
+#tf-projects{
+	background: #000;
 	padding: 5%  0 8% 0;
 	text-align: center;
 }
@@ -160,7 +166,7 @@ a.btn {
 }
 button.btn.btn-primary.my-btn,
 a.btn.btn-primary.my-btn {
-	background: #2F937B;
+	background: #00CED1;
 	border-color: transparent;
 	border-radius: 0px;
 	border-width: 2px;
@@ -173,7 +179,7 @@ a.btn.btn-primary.my-btn {
 button.btn.btn-primary.my-btn:hover,
 a.btn.btn-primary.my-btn:hover{
 	background: #FFFFFF;
-	color: #2F937B;
+	color: #00CED1;
 	border-color: transparent;
 }
 button.btn.btn-primary.my-btn.dark:hover,
@@ -196,8 +202,8 @@ a.btn.btn-primary.my-btn2 {
 }
 
 a.btn.btn-primary.my-btn2:hover{
-	background: #2F937B;
-	color: #ffffff;
+	background: #FFFFFF;
+	color: #00CED1;
 	border-color: transparent;
 }
 
@@ -222,7 +228,7 @@ ul.cat.list-inline li a:hover{
 .nopadding{ padding:  0;}
 
 #tf-about{
-	background: url(../img/07.jpg);
+	background: url(../img/istanbul1600xedit.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;

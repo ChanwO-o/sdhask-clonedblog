@@ -2,15 +2,19 @@ commit msg
 
 ---------------------
 
-- setup simple summary function for displaying posts on main (grabs first <p> element) will improve this
+- correct import of fonts, add Roboto Slab
+- added a few unsplash & profile images for background
+- extend tf-home & overlay height
+- change headers and color designs
 
 TODO
 
 ---------------------
 
-DB
-- 
-
-UI
+- portfolio main change name kor/eng fade&glitch effect
 - main page change to carousel with glass button slider
-- fill in remaining Lorem ipsum
+- embed soundcloud player
+- pop-out effect for projects grid on portfolio main
+- projects grid: laptop server, pc building, internship, animalspan
+- tf-about also parallax scroll
+- angle side between about & projects

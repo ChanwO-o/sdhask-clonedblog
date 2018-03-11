@@ -28,10 +28,8 @@ h2{
 }
 
 h4 {
-	margin-bottom: 20px;
 	font-size: 16px;
 	font-weight: 700;
-	color: rgb(47, 147, 123);
 }
 p{
 	font-size: 13px;
@@ -66,7 +64,7 @@ a:focus{
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	height: 800px;
+	/*height: 800px;*/
 	color: #cfcfcf;
 }
 
@@ -128,7 +126,70 @@ a:focus{
 	font-family: 'Playball', cursive;
 }
 
+#tf-intro{
+	background: #00000c;
+	padding: 7% 0;
+	text-align: center;
+}
+
+
+
+/*---------------------------------------------------- Work Experience Style ------------------------------------------------------*/
+
+#tf-experience{
+	/*background: #dfdbe0;*/
+	padding: 7% 0;
+}
+
+.section-title {
+	text-align: center;
+}
+
+.myexperties {
+	background:#fff;
+}
+.myexperties .container{
+	padding-top:67px ;
+	padding-bottom:0 ;
+	margin-bottom:-20px;
+}
+.expertiesico {
+	padding:40px 0px 40px 0;
+	text-align:center;
+	font-family:'Crimson Text',serif;
+	font-size:21px;
+	line-height:24px;
+	color:#5b4c5c;
+	font-style:italic;
+}
+.expertiesdesc {
+	border-left:2px solid #ada5ad;
+	padding:0 0 0 69px;
+	margin-bottom:100px;
+}
+.expertiesdesc p {
+	padding-bottom:0;
+}
+.expertiesdesc h4 {
+	font-size:14px;
+	font-weight:300;
+	color:black;
+	line-height:normal;
+	text-transform:uppercase;
+	letter-spacing:2px;
+}
+.expertiesdesc h5 {
+	font-family: 'Crimson Text', serif;
+	color:#5b4c5c;
+	font-size:18px;
+	font-style:italic;
+	font-weight:400;
+}
+
+
+
 #tf-service{
+	background: #dfdbe0;
 	padding: 7% 0;
 	text-align: center;
 }
@@ -144,7 +205,7 @@ a:focus{
 	margin-bottom: 20px;
 	font-size: 16px;
 	font-weight: 700;
-	color: rgb(47, 147, 123);
+	color: rgb(0, 206, 209);
 }
 
 #tf-projects{
@@ -231,7 +292,7 @@ ul.cat.list-inline li a:hover{
 	background: url(../img/istanbul1600xedit.jpg);
 	background-size: cover;
 	background-position: center;
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	color: #222222;
 }
@@ -240,6 +301,14 @@ ul.cat.list-inline li a:hover{
 	height: auto;
 	background-attachment: fixed;
 	padding: 10% 0;
+}
+
+.pAbout {
+	text-shadow:
+		-1px -1px 0 #fff,  
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff;
 }
 
 #tf-why-me{

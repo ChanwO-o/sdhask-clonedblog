@@ -2,10 +2,10 @@ commit msg
 
 ---------------------
 
-- correct import of fonts, add Roboto Slab
-- added a few unsplash & profile images for background
-- extend tf-home & overlay height
-- change headers and color designs
+- changes on design
+- add tf-intro & tf-experience
+- parallax scroll for tf-about
+- rewrite about script
 
 TODO
 
@@ -15,6 +15,6 @@ TODO
 - main page change to carousel with glass button slider
 - embed soundcloud player
 - pop-out effect for projects grid on portfolio main
-- projects grid: laptop server, pc building, internship, animalspan
-- tf-about also parallax scroll
+- projects grid: laptop server, pc building, internship, animalspan, arduino yt video, student events, art
 - angle side between about & projects
+- tf-intro move button images above text

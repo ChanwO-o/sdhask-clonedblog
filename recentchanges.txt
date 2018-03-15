@@ -2,10 +2,9 @@ commit msg
 
 ---------------------
 
-- changes on design
-- add tf-intro & tf-experience
-- parallax scroll for tf-about
-- rewrite about script
+- redesign icons
+- footer designs
+- remove duplicate id error
 
 TODO
 
@@ -15,6 +14,5 @@ TODO
 - main page change to carousel with glass button slider
 - embed soundcloud player
 - pop-out effect for projects grid on portfolio main
-- projects grid: laptop server, pc building, internship, animalspan, arduino yt video, student events, art
+- projects grid: laptop server, pc building, internship, animalspan, arduino yt video, student events, art, python scripts
 - angle side between about & projects
-- tf-intro move button images above text

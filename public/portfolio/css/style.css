@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:500,600,700,100,800,900,400,200,300);
 @import url(https://fonts.googleapis.com/css?family=Playball);
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body, html{
 	/*font-family: 'Raleway', sans-serif;*/
@@ -126,15 +127,18 @@ a:focus{
 	font-family: 'Playball', cursive;
 }
 
-#tf-intro{
+#tf-intro {
 	background: #00000c;
 	padding: 7% 0;
 	text-align: center;
 }
 
+.media-middle i {
+	padding: 30px 0px 40px 0;
+	font-size: 60px;
+	color: limegreen;
+}
 
-
-/*---------------------------------------------------- Work Experience Style ------------------------------------------------------*/
 
 #tf-experience{
 	/*background: #dfdbe0;*/
@@ -194,12 +198,6 @@ a:focus{
 	text-align: center;
 }
 
-.media-left.media-middle i {
-	padding: 20px 30px 20px 0;
-	font-size: 30px;
-	color: rgb(47, 147, 123);
-
-}
 
 .media-body h4 {
 	margin-bottom: 20px;
@@ -325,7 +323,7 @@ ul.cat.list-inline li a:hover{
 	background-attachment: fixed;
 	padding: 5% 0;
 }
-ul.why-me li{
+.why-me li{
 	margin: 10px 0;
 }
 #tf-contact{
@@ -338,7 +336,7 @@ ul.why-me li{
 	text-align: center;
 }
 
-form#contact {
+#contact {
 	padding: 5%;
 	background: #f1f1f1;
 	outline: 6px solid rgba(34, 34, 34, 0.08);
@@ -371,8 +369,42 @@ form#contact {
 #tf-contact .form-control:hover{
 	border-top: 2px solid #2F937B;
 }
-nav#tf-footer {
+
+
+#tf-footer {
 	background: #222222;
-	padding: 3% 0 2% 0;
+	padding: 5% 0 2% 0;
 	color: #f1f1f1;
+}
+.footercol {
+	padding: 2% 0 0 0;
+	margin: 0 1% 0 1%;
+}
+.footercol p {
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	padding: 0 0 0 5%;
+}
+.footercol h4 {
+	font-family: 'Raleway', sans-serif;
+	padding: 0 0 0 5%;
+	margin: 5% 0 6% 0;
+}
+.fcborder {
+	border-top-style: solid;
+	border-top-color: white;
+	border-top-width: 3px;
+}
+.fccontact i {
+	display: inline-block;
+	font-size: 1.5em;
+	color: limegreen;
+	padding: 0 0 0 5%;
+	margin: 0 0 2% 0;
+}
+.fcsocial i{
+	display: inline-block;
+	font-size: 2.0em;
+	color: white;
+	margin: 2% 2% 2% 2%;
 }

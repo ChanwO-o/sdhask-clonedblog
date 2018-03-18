@@ -65,8 +65,8 @@ a:focus{
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	/*height: 800px;*/
 	color: #cfcfcf;
+	height: 100vh; /*fullscreen: 100% of viewport height*/
 }
 
 #tf-home .overlay{
@@ -85,6 +85,7 @@ a:focus{
 	padding: 15% 0 18% 0;
 	text-align: center;
 }
+
 /* Navigation */
 #tf-menu {
 	margin-bottom: 0;

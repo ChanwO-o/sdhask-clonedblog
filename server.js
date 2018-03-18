@@ -9,7 +9,10 @@ var mongoose = require('mongoose');
  * Database configuration
  */
 
-mongoose.connect('mongodb://localhost/blog2017');
+mongoose.Promise = global.Promise;
+var promise = mongoose.connect('mongodb://localhost/blog2017', {
+    useMongoClient: true
+});
 
 var PostSchema = mongoose.Schema({
     title: {type: String, required: true},

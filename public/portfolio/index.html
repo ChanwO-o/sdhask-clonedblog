@@ -44,6 +44,17 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<script>
+			function myFunction() {
+				var div = document.getElementById("tf-intro");
+				// $('#tf-intro').animate({
+				// scrollTop: div.scrollHeight - div.clientHeight
+				// }, 500);
+				
+				div.scrollIntoView(false);
+				// window.scrollTo(0, myDiv.innerHeight);
+			}
+		</script>
 	</head>
 	<body>
 		
@@ -81,7 +92,7 @@
 						<h1>Chan Woo Park</h1>
 						<h3>No promises, Just Prove</h3>
 						<br>
-						<a href="#tf-intro" class="btn btn-primary my-btn2">Look inside</a>
+						<a class="btn btn-primary my-btn2" onclick="myFunction()">Look inside</a>
 						<a href="/blog" class="btn btn-primary my-btn">Visit my Site</a>
 					</div>
 				</div>
@@ -96,12 +107,13 @@
 					<!--<h2 style="color:white;">Where the journey begins...</h2>-->
 					<br>
 					<hr>
+					<!--<a href="#tf-about" class="btn btn-primary my-btn3"><i class="fa fa-angle-double-down"></i></a>-->
 				</div>
 				<div class="space"></div>
 				<div class="col-md-4">
 					<div class="media">
 						<div class="media-middle">
-							<i class="fa fa-digital-ocean"></i>
+							<i class="fa fa-cloud"></i>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">Sent from my VPS</h4>
@@ -112,7 +124,7 @@
 				<div class="col-md-4">
 					<div class="media">
 						<div class="media-middle">
-							<i class="fa fa-terminal"></i>
+							<i class="fa fa-users"></i>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">Career</h4>
@@ -123,7 +135,7 @@
 				<div class="col-md-4">
 					<div class="media">
 						<div class="media-middle">
-							<i class="fa fa-music"></i>
+							<i class="fa fa-heart"></i>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">Blog</h4>

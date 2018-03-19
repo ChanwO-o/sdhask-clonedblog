@@ -2,9 +2,11 @@ commit msg
 
 ---------------------
 
-- set tf-home 100% viewport height
-- fix two mongoose warnings
-- add wmp lab work experience
+- organize style.css into element order
+- add instant-scrolling from tf-home to tf-intro
+- fix more icons
+- attempt at parallax scroll for tf-about (but failed)
+
 
 TODO
 

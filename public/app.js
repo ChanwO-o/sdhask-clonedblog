@@ -9,6 +9,9 @@
             .when('/blog/single', {
                 templateUrl: 'partials/single.html',
                 controller: 'singleController'
+            })
+            .otherwise({
+                redirectTo: '/blog'
             });
         
         $locationProvider.html5Mode({enabled: true, requireBase: false});

@@ -2,7 +2,7 @@
     
     app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/blog', {
+            .when('/', {
                 templateUrl: 'partials/blogMain.html',
                 controller: 'blogMainController'
             })
@@ -11,7 +11,7 @@
                 controller: 'singleController'
             })
             .otherwise({
-                redirectTo: '/blog'
+                redirectTo: '/'
             });
         
         $locationProvider.html5Mode({enabled: true, requireBase: false});

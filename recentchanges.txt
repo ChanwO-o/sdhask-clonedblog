@@ -2,10 +2,9 @@ commit msg
 
 ---------------------
 
-- REMOVE PORTFOLIO portion of project for now.
-- portfolio directory has been backed up
-- portfolio will be used as a separate static page on another domain
-- added .otherwise redirect to /blog @ app.js
+- update README.md
+- update MongoDB schema and settings (db name, messages)
+- replace c9 port number with server's
 
 
 TODO

@@ -10,16 +10,25 @@ var mongoose = require('mongoose');
  */
 
 mongoose.Promise = global.Promise;
-var promise = mongoose.connect('mongodb://localhost/blog2017', {
+var promise = mongoose.connect('mongodb://localhost/blogposts', {
     useMongoClient: true
 });
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, "Connection to db failed"));
+db.once('open', function() {
+  console.log("Connection to db successful!");
+});
+
 
 var PostSchema = mongoose.Schema({
     title: {type: String, required: true},
+    author: String,
     posted: {type: Date, default: Date.now()},                                      // default:current date
     body: String,                                                                   // html content to string
-    tag: {type: String, enum: ['Dev', 'Gaming', 'Army', 'Review', 'Social']},       // the only valid tags allowed
-}, {collection: 'blogposts'}); // collection name is 'blogposts'
+    // tag: {type: String, enum: ['Dev', 'Gaming', 'Army', 'Review', 'Social']},       // the only valid tags allowed
+    tag: [String],
+    comments: [{author: String, body: String, date: Date}]
+}, {collection: 'blog2018'}); // collection name is 'blog2018'
 
 var PostModel = mongoose.model("PostModel", PostSchema);
 
@@ -72,6 +81,7 @@ function getAllPosts(req, res) {
         .then(
             function(blogposts) { // successful: pass all data
                 res.json(blogposts);
+                createBlogPost();        //**TODO** REMOVE THIS TEST
             },
             function(error) {
                 res.sendStatus(400);
@@ -80,7 +90,7 @@ function getAllPosts(req, res) {
 }
 
 
-var port = process.env.PORT;
+var port = process.env.PORT; // replace as 5000
 app.listen(port, function() {
     console.log('SERVER RUNNING... PORT: ' + port);
 });
@@ -99,11 +109,11 @@ app.listen(port, function() {
 
 // mongo > starts shell
 // show dbs
-// use myblog2017
+// use blogposts
 // show collections
-// db.blogposts.find()
-// db.blogposts.remove({"title": "t1"})
-// db.blogposts.insert({title: 'Mongo test title1', posted: ISODate("2017-11-21T23:38:32.406Z"), author: 'Chan Woo Park', body: '<h1>London</h1><h3>London is the capital city of England.</h3>'})
+// db.blog2018.find()
+// db.blog2018.remove({"title": "t1"})
+// db.blog2018.insert({title: 'Mongo test title1', posted: ISODate("2017-11-21T23:38:32.406Z"), author: 'Chan Woo Park', body: '<h1>London</h1><h3>London is the capital city of England.</h3>'})
 
 // git
 

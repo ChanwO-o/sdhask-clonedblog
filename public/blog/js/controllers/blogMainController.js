@@ -7,6 +7,7 @@ app.controller("blogMainController", function($scope, $http, sharedata) {
             });
         
         function init() {
+            createTestJson();
         }
         
         
@@ -35,6 +36,16 @@ app.controller("blogMainController", function($scope, $http, sharedata) {
             }
             summary += text;
             return summary;
+        }
+        
+        function createTestJson() {
+            var text = '{ "title" : "t1", "body" : "<h1>My First Heading</h1> <p>My first paragraph.</p>" }';
+            var obj = JSON.parse(text);
+            console.log("created JSON obj @ createJson()");
+            console.log(obj);
+            $http
+                .post("/api/blogposts", obj) // where I'm listening for incoming requests
+                .then(console.log("post request made to /api/blogposts @ createJson()"));
         }
         
         // $scope.testIndex = function(index) {

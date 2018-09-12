@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
  */
 
 mongoose.Promise = global.Promise;
-var promise = mongoose.connect('mongodb://localhost/blogposts', {
+var promise = mongoose.connect('mongodb://localhost:27017/blogposts', {
     useMongoClient: true
 });
 var db = mongoose.connection;

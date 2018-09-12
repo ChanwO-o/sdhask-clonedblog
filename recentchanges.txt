@@ -2,9 +2,8 @@ commit msg
 
 ---------------------
 
-- update README.md
-- update MongoDB schema and settings (db name, messages)
-- replace c9 port number with server's
+- specify mongodb port 27017 on connection in server.js
+- keep specific package versions in package.json
 
 
 TODO

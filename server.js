@@ -35,13 +35,9 @@ var PostModel = mongoose.model("PostModel", PostSchema);
 
 /**
  * Express configuration:
- * both directories are declared separately as main sources for serving static content
+ * directory declared as main source for serving static content
  */
-// app.use(express.static(path.join(__dirname, 'public', 'portfolio'))); // adding '/portfolio' as first param will change url
-app.use(express.static(path.join(__dirname, 'public', 'blog')));    // leaving first param as '/blog' will not load main partial
-app.use(express.static(path.join(__dirname, 'public'))); // required for accessing app.js from both portfolio & blog
-// app.use(express.static(path.join(__dirname, 'public', 'blog', 'js')));
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json()); // turn on json parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -51,9 +47,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
  */
 app.post("/api/blogposts", createBlogPost);
 app.get("/api/blogposts", getAllPosts);
-// app.delete("/api/blogpost/:id", deletePost);
-// app.get("/api/blogpost/:id", getPostById);
-// app.put("/api/blogpost/:id", updatePost);
 
 
 // retrieve data from post request

@@ -1,4 +1,4 @@
-app.controller("blogMainController", function($scope, $http, sharedata) {
+angular.module("WebsiteApp").controller("blogMainController", function($scope, $http, sharedata) {
         
         var getAllPostsRequest = $http.get("/api/blogposts")
             .then(function (allBlogPosts) {
@@ -7,7 +7,7 @@ app.controller("blogMainController", function($scope, $http, sharedata) {
             });
         
         function init() {
-            createTestJson();
+            // createTestJson();
         }
         
         

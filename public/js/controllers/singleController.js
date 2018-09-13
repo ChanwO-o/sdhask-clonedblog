@@ -1,4 +1,4 @@
-app.controller("singleController", function($scope, $http, sharedata) {
+angular.module("WebsiteApp").controller("singleController", function($scope, $http, sharedata) {
     
     function init() {
         var post = sharedata.getViewBlog();

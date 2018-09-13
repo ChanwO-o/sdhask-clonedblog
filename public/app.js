@@ -6,7 +6,7 @@
                 templateUrl: 'partials/blogMain.html',
                 controller: 'blogMainController'
             })
-            .when('/blog/single', {
+            .when('/blog', {
                 templateUrl: 'partials/single.html',
                 controller: 'singleController'
             })

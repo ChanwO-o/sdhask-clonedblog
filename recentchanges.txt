@@ -2,8 +2,7 @@ commit msg
 
 ---------------------
 
-- specify mongodb port 27017 on connection in server.js
-- keep specific package versions in package.json
+- fix route paths (no more /single)
 
 
 TODO

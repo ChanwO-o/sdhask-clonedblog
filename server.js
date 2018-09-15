@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
  */
 
 mongoose.Promise = global.Promise;
-var promise = mongoose.connect('mongodb://localhost:27017/blogposts', {
+var promise = mongoose.connect('mongodb://blogger:asdf123@localhost:27017/blogposts', {
     useMongoClient: true
 });
 var db = mongoose.connection;
@@ -107,6 +107,8 @@ app.listen(port, function() {
 // db.blog2018.find()
 // db.blog2018.remove({"title": "t1"})
 // db.blog2018.insert({title: 'Mongo test title1', posted: ISODate("2017-11-21T23:38:32.406Z"), author: 'Chan Woo Park', body: '<h1>London</h1><h3>London is the capital city of England.</h3>'})
+// mongo -u blogger -p --authenticationDatabase blogposts
+// user: blogger pw: asdf123
 
 // git
 

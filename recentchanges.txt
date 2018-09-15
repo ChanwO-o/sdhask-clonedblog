@@ -2,7 +2,7 @@ commit msg
 
 ---------------------
 
-- fix route paths (no more /single)
+- use mongoose connect url with auth credentials
 
 
 TODO

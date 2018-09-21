@@ -1,6 +1,6 @@
 {
   "name": "chanwoopark-blog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "cwp blog",
   "main": "server.js",
   "repository": "",

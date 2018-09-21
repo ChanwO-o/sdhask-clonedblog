@@ -2,7 +2,7 @@ commit msg
 
 ---------------------
 
-- use mongoose connect url with auth credentials
+- update README.md
 
 
 TODO

@@ -10,6 +10,9 @@
                 templateUrl: 'partials/single.html',
                 controller: 'singleController'
             })
+            .when('/singlesample', {
+                templateUrl: 'partials/singlesample.html'
+            })
             .otherwise({
                 redirectTo: '/'
             });

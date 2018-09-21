@@ -2,7 +2,7 @@ commit msg
 
 ---------------------
 
-- update README.md
+- add link to view singlesample partial
 
 
 TODO

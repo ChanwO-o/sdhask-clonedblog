@@ -2,7 +2,10 @@ commit msg
 
 ---------------------
 
-- add link to view singlesample partial
+- solve left sidebar overlap problem
+- add responsive padding to right sidebar
+- depth of left sidebar to 1 (stay above right sb)
+- remove left sb padding
 
 
 TODO

@@ -318,11 +318,26 @@ button {
 
 
 
+/* Content Area (Right Sidebar) */
+
+.content-padding {
+    /*padding-left: 30px;*/
+    padding-left: 5%;
+}
+
+
+
 /* About Me (Left Sidebar) */	
 
 .about-fixed {
     position: fixed;
     width: 20.8%;
+    z-index: 1;
+}
+
+.about-padding {    /* Remove padding for sidebar */
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .my-pic {
@@ -1225,6 +1240,10 @@ blockquote {
     .about-fixed {
        position: inherit;
        width: auto;
+    }
+    
+    .content-padding {
+        padding-left: 15px;
     }
 	
     .post-quote {

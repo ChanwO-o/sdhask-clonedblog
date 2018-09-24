@@ -47,6 +47,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
  */
 app.post("/api/blogposts", createBlogPost);
 app.get("/api/blogposts", getAllPosts);
+// app.get("/singlesample", function(req, res) {
+//     res.send('sinsam');
+// });
 
 
 // retrieve data from post request

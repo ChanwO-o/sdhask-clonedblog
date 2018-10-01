@@ -2,10 +2,8 @@ commit msg
 
 ---------------------
 
-- solve left sidebar overlap problem
-- add responsive padding to right sidebar
-- depth of left sidebar to 1 (stay above right sb)
-- remove left sb padding
+- update sidebar pic
+- change main theme colors
 
 
 TODO

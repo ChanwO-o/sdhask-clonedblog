@@ -57,6 +57,14 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
         }
     }
     
+    $scope.scheduleToTableString = function(schedule) {
+        var key = Object.keys(schedule)[0];
+        console.log("key is: ", key);
+        var value = schedule[key];
+        console.log("value of first: ", value);
+        return key.toUpperCase() + "   " + value;
+    }
+    
     
     function timeStringToInt(timestr) {
         var hour = timestr.split(":")[0];
@@ -65,9 +73,7 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
         return parseInt(hour, 10) * 60 + parseInt(minute, 10);
     }
     
-    function scheduleToTableString(sched) {
-        // return 
-    }
+    
     
     init();
 });

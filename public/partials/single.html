@@ -37,8 +37,7 @@
 			
 			<table>
 				<tr ng-repeat="schedule in schedulecart">
-				<td>{{ schedule.Name }}</td>
-				<td>{{ s.Country }}</td>
+				<td>{{scheduleToTableString(schedule)}}</td>
 				</tr>
 			</table>
 		</div>

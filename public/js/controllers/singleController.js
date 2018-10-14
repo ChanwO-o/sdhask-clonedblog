@@ -3,6 +3,7 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
     function init() {
         console.log("singleController.js init()");
         
+        $scope.schedulecart = [[]];
     }
     
     $scope.addSchedule = function() {
@@ -36,6 +37,8 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
         else {
             console.log("PASS");
             angular.element(document.getElementById("warningtext")).text("Schedule added");
+            var schedarray = []; // array of four numbers
+            $scope.schedulecart.push("");
         }
     }
         
@@ -45,6 +48,10 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
         var minute = timestr.split(":")[1];
         
         return parseInt(hour, 10) * 60 + parseInt(minute, 10);
+    }
+    
+    function scheduleToTableString() {
+        
     }
     
     init();

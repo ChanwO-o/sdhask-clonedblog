@@ -27,16 +27,20 @@
 				</select>
 			</div>
 			
-			
 			<form>
 				Starts: <input id="starttime" type="time" name="usr_time">
 				Ends: <input id="endtime" type="time" name="usr_time">
 				<input ng-click="addSchedule()" type="submit">
 			</form>
 			
-			
-			
 			<h3 id="warningtext">Enter your schedule day & time</h3>
+			
+			<table>
+				<tr ng-repeat="schedule in schedulecart">
+				<td>{{ schedule.Name }}</td>
+				<td>{{ s.Country }}</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 </div>

@@ -44,6 +44,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
  
 app.post("/api/schedules", createSchedule);
 app.get("/api/schedules", getAllSchedules);
+app.get("/api/schedules/:id", getScheduleById);
 // app.get("/singlesample", function(req, res) {
 //     res.send('sinsam');
 // });
@@ -81,6 +82,24 @@ function getAllSchedules(req, res) {
             }
         );
 }
+
+// return post with id
+function getScheduleById(req, res) {
+    var blogpostId = req.params.id;
+    PostModel
+        // filtered search
+        //.find({ _id: blogpostId}) // find() method ALWAYS returns an array '[]'; even though we only have one blog post. use findById() instead to return single object
+        .findById(blogpostId) // findById() method doesn't require any filter (i.e. "_id:") because ids are unique. Filter is implied
+        .then(
+            function(blogpost) {
+                res.json(blogpost);
+            },
+            function(error) {
+                res.sendStatus(400);
+            }
+        );
+}
+
 
 
 var port = process.env.PORT; // replace as 5000

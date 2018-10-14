@@ -50,7 +50,7 @@ angular.module("WebsiteApp").controller("blogMainController", function($scope, $
         function createTestJson() {
             var text = '{ "userid" : "id here", "monday" : 2 }';
             var obj = JSON.parse(text);
-            console.log("created JSON obj @ createJson()", obj);
+            // console.log("created JSON obj @ createJson()", obj);
             
             $http
                 .post("/api/schedules", obj) // where I'm listening for incoming requests

@@ -1,6 +1,10 @@
-function newtime(sthr, stmin, endhr,endmin)
+function newtime(array)
 {
-  var arr = [sthr*60 + stmin, endhr *60 + endmin];
+  console.log("array", array)
+  
+  var arr = [];
+  for (var i = 0; i< array.length; i++)
+   arr.push([array[i][0]*60 + array[i][1],  array[i][2]*60 + array[i][3]]);
   return arr;
 }
 
@@ -47,6 +51,7 @@ function inBetween(a, b) {
 
   function merge_schedule(obj)
   {
+      console.log('obj', obj);
       var result = [];
       for (var key in obj)
       {
@@ -54,9 +59,10 @@ function inBetween(a, b) {
         {
           result[key] = obj[key];
         }
-        else
+        else if (key.includes("day"))
         {
-          result[key] = merge_time(obj[key]);
+          console.log("obj[key]", obj[key]);
+          result[key] = merge_time(newtime(obj[key]));
         }
       }
       return result;
@@ -65,6 +71,7 @@ function inBetween(a, b) {
   function merge_time(array)
   {
     //if startmin == other startmin, return b else return a
+    // console.log("!!", array);
     var arr = array.sort();
     var tmp = inBetween(arr[0], arr[1]);
     var index;
@@ -102,21 +109,21 @@ function inBetween(a, b) {
     return f_result;
   }
   
-    function remaining_schedule(obj)
+  function remaining_schedule(obj)
   {
-    var result = [];
-    for (var key in obj)
-    {
-      if(key == "id")
+      var result = [];
+      for (var key in obj)
       {
-        result[key] = obj[key];
+        if(key == "id")
+        {
+          result[key] = obj[key];
+        }
+        else if (key.includes("day"))
+        {
+          result[key] = remain_time(obj[key]);
+        }
       }
-      else
-      {
-        result[key] = reamin_time(obj[key]);
-      }
-    }
-    return result;
+      return result;
   }
   
   function remain_time(array){

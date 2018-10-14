@@ -40,6 +40,20 @@
 				<td>{{scheduleToTableString(schedule)}}</td>
 				</tr>
 			</table>
+			
+			
+			
+			<button ng-click="calculateRemainders()" class="btn btn-primary btn-block">When you free?!</button>
+			
+			
+			<h3 id="remaindertext"></h3>
+			
+			
+			<table>
+				<tr ng-repeat="remainder in remainders">
+				<td>{{scheduleToTableString(remainder)}}</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 </div>

@@ -1,9 +1,10 @@
 angular.module("WebsiteApp").controller("singleController", function($scope, $http, sharedata) {
     
     function init() {
-        console.log("singleController.js init()");
+        // console.log("singleController.js init()");
         
         $scope.schedulecart = [];
+        $scope.remainders = [];
     }
     
     $scope.addSchedule = function() {
@@ -15,9 +16,9 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
         var endtimetotalmins = timeStringToInt(endtimeselected);
         
         
-        console.log("day: ", dayselected);
-        console.log("starttime: ", starttimetotalmins);
-        console.log("endtimeselected: ", endtimetotalmins);
+        // console.log("day: ", dayselected);
+        // console.log("starttime: ", starttimetotalmins);
+        // console.log("endtimeselected: ", endtimetotalmins);
         
         if (starttimeselected == "") {
             // console.log("did not enter start time");
@@ -50,7 +51,7 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
             var text = '{"' + dayselected + '" : [' + timearray + ']}';
             // console.log("value of text: ", text);
             var schedule = JSON.parse(text); // JSON object (e.g. {"monday" : [1, 2, 3, 4]} )
-            console.log("value of schedule json obj: ", schedule);
+            // console.log("value of schedule json obj: ", schedule);
             
             $scope.schedulecart.push(schedule);
             console.log("schedulecart: ", $scope.schedulecart);
@@ -59,10 +60,48 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
     
     $scope.scheduleToTableString = function(schedule) {
         var key = Object.keys(schedule)[0];
-        console.log("key is: ", key);
+        // console.log("key is: ", key);
         var value = schedule[key];
-        console.log("value of first: ", value);
+        // console.log("value of first: ", value);
         return key.toUpperCase() + "   " + value;
+    }
+    
+    
+    $scope.calculateRemainders = function() {
+        // displaySchedulecart();
+        var result = changeSchedulecartFormat();
+        // displayResult(result);
+        
+        var merged = merge_schedule(result);
+        // console.log('merge_schedule', merged);
+        var remains = remaining_schedule(merged);
+        
+        console.log("REMAINDERS:", remains);
+        
+        $scope.remainders = remains;
+        
+        angular.element(document.getElementById("remaindertext")).text("Your time to meet:");
+    }
+    
+    
+    function changeSchedulecartFormat() {
+        var result = {};
+        for (var i = 0; i < $scope.schedulecart.length; ++i) {
+            var json = $scope.schedulecart[i];
+            var key = Object.keys(json)[0];
+            var value = json[Object.keys(json)[0]];
+            // console.log("key: ", key);
+            // console.log("value: ", value);
+            
+            if (key in result) { // key already in result, add it to the existing list
+                // console.log(key, " is already a key, add to existing list");
+                result[key].push(value);
+            }
+            else { // key does not exist, add new element
+                result[key] = [value];
+            }
+        }
+        return result;
     }
     
     
@@ -74,6 +113,23 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
     }
     
     
+    
+    function displaySchedulecart() {
+        console.log("====display SC==");
+        for (var i = 0; i < $scope.schedulecart.length; i++) {
+            var json = $scope.schedulecart[i];
+            console.log("key: ", Object.keys(json)[0]);
+            console.log("value: ", json[Object.keys(json)[0]]);
+        }
+    }
+    
+    function displayResult(result) {
+        console.log("====displayResult==");
+        for (var key in result) {
+            console.log("key: ", key);
+            console.log("value: ", result[key]);
+        }
+    }
     
     init();
 });

@@ -1,56 +1,27 @@
 angular.module("WebsiteApp").controller("blogMainController", function($scope, $http, sharedata) {
         
-        var getAllPostsRequest = $http.get("/api/blogposts")
-            .then(function (allBlogPosts) {
-                $scope.blogpostlist = allBlogPosts.data;
-                return allBlogPosts.data;
-            });
         
         function init() {
-            // createTestJson();
+            createTestJson();
         }
         
-        
-        $scope.readPost = function(blogpost) {
-            console.log("setting viewBlog as: " + blogpost);
-            sharedata.setViewBlog(blogpost);
+        $scope.checkLogin = function() {
+            var idtextbot = angular.element(document.getElementById("logininput"));
+            console.log("received input id as: " + idtextbot.val());
         }
         
-        $scope.summarizePost = function(blogpost) {
-            var words = 5;
-            var body = blogpost.body;
-            var summary = "";
-            
-            // assume html is in correct format
-            var pStart = body.search('<p>');
-            
-            if (pStart != -1) {
-                var pEnd = body.search('</p>');
-                var text = body.substring(pStart + 3, pEnd).split();
-                
-                // add n words as summary
-                // while (words > 0) {
-                    
-                //     words--;
-                // }
-            }
-            summary += text;
-            return summary;
-        }
         
         function createTestJson() {
-            var text = '{ "title" : "t1", "body" : "<h1>My First Heading</h1> <p>My first paragraph.</p>" }';
+            var text = '{ "userid" : "id here", "monday" : 2 }';
             var obj = JSON.parse(text);
-            console.log("created JSON obj @ createJson()");
-            console.log(obj);
+            console.log("created JSON obj @ createJson()", obj);
+            
             $http
-                .post("/api/blogposts", obj) // where I'm listening for incoming requests
-                .then(console.log("post request made to /api/blogposts @ createJson()"));
+                .post("/api/schedules", obj) // where I'm listening for incoming requests
+                .then(console.log("post request made to /api/schedules @ createJson()"));
         }
         
-        // $scope.testIndex = function(index) {
-        //     console.log("index is " + index);
-        // }
+        
         
         init();
     });

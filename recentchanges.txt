@@ -10,10 +10,5 @@ TODO
 
 ---------------------
 
-- add filter overlay to tf-about
-- portfolio main change name kor/eng fade&glitch effect
 - main page change to carousel with glass button slider
 - embed soundcloud player
-- pop-out effect for projects grid on portfolio main
-- projects grid: laptop server, pc building, internship, animalspan, arduino yt video, student events, art, python scripts
-- angle side between about & projects

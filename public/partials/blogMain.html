@@ -3,7 +3,7 @@
 <div class="row">
     
     <div class="sub-title">
-        <h2>My Blog</h2>
+        <h2>Scheduler!</h2>
         <a href="contact.html"><i class="icon-envelope"></i></a>
     </div>
     
@@ -11,38 +11,35 @@
     <div class="col-md-12 content-page">
         
         
-        <div ng-repeat="blogpost in blogpostlist" repeat-end>
+        <input id="logininput" class="form-control" placeholder="Enter ID"/>
+        <button ng-click="checkLogin()" class="btn btn-primary btn-block">Login</button>
+        <button ng-click="" class="btn btn-primary btn-block">Create new</button>
+        
+        <!--<div ng-repeat="blogpost in blogpostlist" repeat-end>-->
             
             <!--Blog Post Start -->
-            <div class="col-md-12 blog-post">
+        <!--    <div class="col-md-12 blog-post">-->
                 
-                <div class="post-title">
-                    <a href="/blog" ng-click="readPost(blogpost)"><h1>{{blogpost.title}}</h1></a>
-                </div>
+        <!--        <div class="post-title">-->
+        <!--            <a href="/blog" ng-click="readPost(blogpost)"><h1>{{blogpost.title}}</h1></a>-->
+        <!--        </div>-->
                 
-                <div class="post-info">
-                    <span>{{blogpost.posted}} / by <a href="#" target="_blank">{{blogpost.author}}</a></span>
-                </div>
-                
-                
-                <div ng-bind-html="summarizePost(blogpost)"></div>
+        <!--        <div class="post-info">-->
+        <!--            <span>{{blogpost.posted}} / by <a href="#" target="_blank">{{blogpost.author}}</a></span>-->
+        <!--        </div>-->
                 
                 
-                <a href="/blog" ng-click="readPost(blogpost)" class="button button-style button-anim fa fa-long-arrow-right"><span>Read More</span></a>
+        <!--        <div ng-bind-html="summarizePost(blogpost)"></div>-->
                 
-            </div>
+                
+        <!--        <a href="/blog" ng-click="readPost(blogpost)" class="button button-style button-anim fa fa-long-arrow-right"><span>Read More</span></a>-->
+                
+        <!--    </div>-->
             <!--Blog Post End -->
             
-        </div>
+        <!--</div>-->
         
         
-        
-        
-        
-        <div class="col-md-12 text-center">
-            <a href="javascript:void(0)" id="load-more-post" class="load-more-button">Load</a>
-            <div id="post-end-message"></div>
-        </div>
 
     </div>
 
@@ -58,7 +55,7 @@
             <button class="submit-btn" type="submit">Submit</button>
 		</div>
 		
-        <p>Subscribe to my weekly newsletter</p>
+        <p>Sub</p>
         <label for="mc-email" class="mc-label"></label>
     </form>
     

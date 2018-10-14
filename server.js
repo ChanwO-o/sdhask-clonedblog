@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
  */
 
 mongoose.Promise = global.Promise;
-var promise = mongoose.connect('mongodb://blogger:asdf123@localhost:27017/blogposts', {
+var promise = mongoose.connect('mongodb://localhost:27017/scheduledb', {
     useMongoClient: true
 });
 var db = mongoose.connection;
@@ -21,14 +21,10 @@ db.once('open', function() {
 
 
 var PostSchema = mongoose.Schema({
-    title: {type: String, required: true},
-    author: String,
-    posted: {type: Date, default: Date.now()},                                      // default:current date
-    body: String,                                                                   // html content to string
-    // tag: {type: String, enum: ['Dev', 'Gaming', 'Army', 'Review', 'Social']},       // the only valid tags allowed
-    tag: [String],
-    comments: [{author: String, body: String, date: Date}]
-}, {collection: 'blog2018'}); // collection name is 'blog2018'
+    userid: {type: String, required: true},
+    monday: Number,
+    tuesday: Number
+}, {collection: 'schedules'}); // collection name is 'blog2018'
 
 var PostModel = mongoose.model("PostModel", PostSchema);
 
@@ -45,15 +41,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /**
  * Mappings
  */
-app.post("/api/blogposts", createBlogPost);
-app.get("/api/blogposts", getAllPosts);
+ 
+app.post("/api/schedules", createSchedule);
+app.get("/api/schedules", getAllSchedules);
 // app.get("/singlesample", function(req, res) {
 //     res.send('sinsam');
 // });
 
 
 // retrieve data from post request
-function createBlogPost(req, res) {
+function createSchedule(req, res) {
     var theblogpost = req.body;
     console.log("request received:", theblogpost);
     PostModel
@@ -71,13 +68,13 @@ function createBlogPost(req, res) {
 }
 
 // retrieve all posts from database as an array, send back to client
-function getAllPosts(req, res) {
+function getAllSchedules(req, res) {
     PostModel
         .find() // retrieve instances from a collection (no parameters: returns everything)
         .then(
             function(blogposts) { // successful: pass all data
                 res.json(blogposts);
-                createBlogPost();        //**TODO** REMOVE THIS TEST
+                // createBlogPost();        //**TODO** REMOVE THIS TEST
             },
             function(error) {
                 res.sendStatus(400);

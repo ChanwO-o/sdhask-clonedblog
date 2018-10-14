@@ -2,11 +2,11 @@
     
     app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/', {
+            .when('/', {    //  login
                 templateUrl: 'partials/blogMain.html',
                 controller: 'blogMainController'
             })
-            .when('/blog', {
+            .when('/blog', {    //  adding schedules screen
                 templateUrl: 'partials/single.html',
                 controller: 'singleController'
             })

@@ -3,6 +3,7 @@ angular.module("WebsiteApp").controller("blogMainController", function($scope, $
         
         function init() {
             // createTestJson();
+            $scope.link = '';
         }
         
         $scope.checkLogin = function() {
@@ -26,14 +27,24 @@ angular.module("WebsiteApp").controller("blogMainController", function($scope, $
         
         $scope.createNewUser = function() {
             var idtextbot = angular.element(document.getElementById("logininput"));
-            
             var text = '{ "userid" : "' + idtextbot.val() + '"}';
-            console.log(text);
-            var obj = JSON.parse(text);
+            // console.log("text is ", text);
             
-            $http
-                .post("/api/schedules", obj) // where I'm listening for incoming requests
-                .then(console.log("post request made to /api/schedules for ", obj));
+            if (idtextbot.val() != "") {
+                var obj = JSON.parse(text);
+                $http
+                    .post("/api/schedules", obj) // where I'm listening for incoming requests
+                    .then(console.log("user created for ", obj));
+                
+                console.log("proceeding with login");
+                $scope.link = '/blog';
+                // window.location.href='https://chanwoopark-blog-cloned-chanw0o.c9users.io/blog';
+                
+            } else {
+                console.log("id length is 0! user not created");
+            }
+            
+            
             
         }
         

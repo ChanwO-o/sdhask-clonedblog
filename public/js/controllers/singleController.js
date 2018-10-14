@@ -13,6 +13,15 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
             console.log("day: ", dayselected);
             console.log("starttime: ", starttimeselected);
             console.log("endtimeselected: ", endtimeselected);
+            
+            if (starttimeselected == "") {
+                console.log("did not enter start time");
+                angular.element(document.getElementById("warningtext")).text("Enter start time!");
+            }
+            else if (endtimeselected == "") {
+                console.log("did not enter end time");
+                angular.element(document.getElementById("warningtext")).text("Enter end time!");
+            }
         }
     
     

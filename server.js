@@ -22,8 +22,13 @@ db.once('open', function() {
 
 var PostSchema = mongoose.Schema({
     userid: {type: String, required: true},
-    monday: Number,
-    tuesday: Number
+    monday: [[Number]],
+    tuesday: [[Number]],
+    wednesday: [[Number]],
+    thursday: [[Number]],
+    friday: [[Number]],
+    saturday: [[Number]],
+    sunday: [[Number]]
 }, {collection: 'schedules'}); // collection name is 'blog2018'
 
 var PostModel = mongoose.model("PostModel", PostSchema);

@@ -26,11 +26,11 @@ angular.module("WebsiteApp").controller("blogMainController", function($scope, $
         }
         
         $scope.createNewUser = function() {
-            var idtextbot = angular.element(document.getElementById("logininput"));
-            var text = '{ "userid" : "' + idtextbot.val() + '"}';
+            var idtextbox = angular.element(document.getElementById("logininput"));
+            var text = '{ "userid" : "' + idtextbox.val() + '"}';
             // console.log("text is ", text);
             
-            if (idtextbot.val() != "") {
+            if (idtextbox.val() != "") {
                 var obj = JSON.parse(text);
                 $http
                     .post("/api/schedules", obj) // where I'm listening for incoming requests
@@ -43,8 +43,6 @@ angular.module("WebsiteApp").controller("blogMainController", function($scope, $
             } else {
                 console.log("id length is 0! user not created");
             }
-            
-            
             
         }
         

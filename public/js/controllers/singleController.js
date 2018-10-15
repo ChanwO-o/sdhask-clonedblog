@@ -4,7 +4,7 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
         // console.log("singleController.js init()");
         
         $scope.schedulecart = [];
-        $scope.remainders = [];
+        $scope.remaindercart = {"monday" : [44,55]};
     }
     
     $scope.addSchedule = function() {
@@ -69,18 +69,23 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
     
     $scope.calculateRemainders = function() {
         // displaySchedulecart();
-        var result = changeSchedulecartFormat();
-        // displayResult(result);
+        var readyToMerge = changeSchedulecartFormat();
+        // displayBeforeMerging(readyToMerge);
         
-        var merged = merge_schedule(result);
+        var merged = merge_schedule(readyToMerge);
         // console.log('merge_schedule', merged);
         var remains = remaining_schedule(merged);
         
         console.log("REMAINDERS:", remains);
         
-        $scope.remainders = remains;
+        // var text = '{ "monday" : [ [1,2],[3,4] ] }';
         
-        angular.element(document.getElementById("remaindertext")).text("Your time to meet:");
+        $scope.remaindercart = remains;
+        // $scope.remaindercart.push(JSON.parse(text));
+        // $scope.remaindercart["wednesday"] = [[1,2,3,4]];
+        
+        angular.element(document.getElementById("remaindertextinfo")).text("Your time to meet:");
+        angular.element(document.getElementById("remaindertext")).text("asdfasdf");
     }
     
     
@@ -123,11 +128,17 @@ angular.module("WebsiteApp").controller("singleController", function($scope, $ht
         }
     }
     
-    function displayResult(result) {
+    function displayBeforeMerging(result) {
         console.log("====displayResult==");
         for (var key in result) {
             console.log("key: ", key);
             console.log("value: ", result[key]);
+        }
+    }
+    
+    function resultTextDisplay() {
+        for (var key in $scope.remaindercart) {
+            
         }
     }
     

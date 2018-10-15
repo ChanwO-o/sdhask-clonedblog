@@ -1,12 +1,6 @@
-Project of my personal blog consisting of a content management system
-Content can be viewed at blog.parkchanwoo.com
+##SD Hacks @ UC San Diego
 
-Built using MEAN stack tech
-MongoDB
-Express.js
-Angular.js
-Node.js
+####10/12/2018 ~ 10/14/2018
 
-Hosted on DigitalOcean droplet running Ubuntu 16.04
-Webserver: Nginx
-https configured (A+ grade on SSL labs)
+
+Web app that collects schedules of users and returns a range of timeframes when everyone is available
